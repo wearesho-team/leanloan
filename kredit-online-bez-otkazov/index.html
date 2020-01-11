@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Кредит онлайн без отказа в Украине от Leanloan</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="description"
           content="Нужен кредит онлайн без отказа? На нашем сайта можно оформить займа онлайн без отказа, выбрав среди множества сервисов.">
 
@@ -25,22 +26,25 @@
 
     <link rel="canonical" href="https://leanloan.com.ua/kredit-onlajn-bez-otkaza/ua"/>
     <link rel="alternate" hreflang="ru_UA" href="https://leanloan.com.ua/kredit-onlajn-bez-otkaza"/>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,800,900&display=swap&subset=cyrillic"
+          rel="stylesheet">
     <link rel="stylesheet" href="../css/inner-page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous"/>
 
     <!-- OpenGraph STARTS -->
     <meta property="og:locale" content="ru_UA"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="Кредит онлайн без отказа в Украине от Leanloan"/>
-    <meta property="og:description" content="Нужен кредит онлайн без отказа? На нашем сайта можно оформить займа онлайн без отказа, выбрав среди множества сервисов."/>
+    <meta property="og:description"
+          content="Нужен кредит онлайн без отказа? На нашем сайта можно оформить займа онлайн без отказа, выбрав среди множества сервисов."/>
     <meta property="og:url" content="https://leanloan.com.ua/kredit-onlajn-bez-otkaza"/>
     <meta property="og:site_name" content="Leanloan"/>
     <meta property="og:image" content="https://leanloan.com.ua/android-chrome-512x512.png"/>
     <!-- OpenGraph ENDS -->
 </head>
 <body>
-<div class="offer" id="offer-template" style="display: none;">
+<article class="offer" id="offer-template" style="display: none;">
     <div class="offer_logo">
         <div class="offer_logo_con logo-container">
         </div>
@@ -72,19 +76,21 @@
                 <div>
                     <div class="label">Возвращаете</div>
                     <div class="value">
-                        3002 <small>грн</small>
+                        <span data-field="calculator-return-amount"></span> <small>грн</small>
                     </div>
                 </div>
                 <div>
                     <div class="label">Берете</div>
                     <div class="value">
-                        3000 <small>грн</small>
+                        <span data-field="calculator-amount"></span> <small>грн</small>
                     </div>
                 </div>
                 <div>
-                    <div class="label">Переплата за <span class="fee_days">5</span> &nbsp;дн.</div>
+                    <div class="label">
+                        Переплата за <span class="fee_days" data-field="calculator-term"></span> &nbsp;дн.
+                    </div>
                     <div class="value">
-                        2 <small>грн</small>
+                        <span data-field="calculator-interest"></span> <small>грн</small>
                     </div>
                 </div>
             </div>
@@ -113,7 +119,7 @@
             <a href=":link" rel="noopener nofollow noindex" target="_blank" class="btn primary_btn">Оформить заявку</a>
         </div>
     </div>
-</div>
+</article>
 
 <!-- Main menu STARTS -->
 <nav class="top-menu">
@@ -143,65 +149,70 @@
     Мгновенные займы без отказа на карту любого банка Украины
 </p>
 
-<div class="main">
+<main>
     <div class="container">
-        <div class="sidebar-sticky">
-            <div class="sidebar">
+        <aside class="sticky">
+            <div>
                 <div class="sidebar__inner">
-                    <div>
-                        <div class="credit_calc">
-                            <div class="credit_calc_row">
-                                <div class="calc_sum">
-                                    <div class="calc_sum_value">
-                                        <div class="calc_sum_value_suffix">грн</div>
-                                        <input type="text" class="calc_sum_value_input" data-calc="sum"
-                                               value="<?=INITIAL_SUM?>">
-                                    </div>
-                                    <div class="calc_sum_label">Сумма займа</div>
+                    <div class="credit_calc" id="credit-calculator">
+                        <div class="credit_calc_row" data-field="amount">
+                            <div class="calc_sum">
+                                <div class="calc_sum_value">
+                                    <div class="calc_sum_value_suffix">грн</div>
+                                    <input type="text" class="calc_sum_value_input">
                                 </div>
-                                <div class="slider_line_cont">
-                                    <div class="jqueryui_slider calc_loanslider loan_amount_slider"
-                                         data-val="<?=INITIAL_SUM?>" data-min="500" data-max="10000"
-                                         data-step="250"></div>
-                                    <div class="slider_control slider_minus">
-                                        <div class="icon"></div>
-                                    </div>
-                                    <div class="slider_control slider_plus">
-                                        <div class="icon"></div>
-                                    </div>
-                                </div>
+                                <div class="calc_sum_label">Сумма займа</div>
                             </div>
-                            <div class="credit_calc_row calc_term">
-                                <div class="calc_sum">
-                                    <div class="calc_sum_value">
-                                        <div class="calc_sum_value_suffix">дней</div>
-                                        <input type="text" class="calc_sum_value_input" data-calc="term"
-                                               value="<?=INITIAL_TERM?>">
-                                    </div>
-                                    <div class="calc_sum_label">Срок займа</div>
+                            <div class="slider_line_cont">
+                                <input type="range">
+                                <button class="slider_control slider_minus" data-action="minus">
+                                    <i class="icon"></i>
+                                </button>
+                                <button class="slider_control slider_plus" data-action="plus">
+                                    <i class="icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="credit_calc_row calc_term" data-field="term">
+                            <div class="calc_sum">
+                                <div class="calc_sum_value">
+                                    <div class="calc_sum_value_suffix">дней</div>
+                                    <input type="text" class="calc_sum_value_input">
                                 </div>
-                                <div class="slider_line_cont">
-                                    <div class="jqueryui_slider calc_loanslider loan_amount_slider"
-                                         data-val="<?=INITIAL_TERM?>" data-min="1" data-max="30" data-step="1"></div>
-                                    <div class="slider_control slider_minus">
-                                        <div class="icon"></div>
-                                    </div>
-                                    <div class="slider_control slider_plus">
-                                        <div class="icon"></div>
-                                    </div>
-                                </div>
+                                <div class="calc_sum_label">Срок займа</div>
+                            </div>
+                            <div class="slider_line_cont">
+                                <input type="range">
+                                <button class="slider_control slider_minus" data-action="minus">
+                                    <i class="icon"></i>
+                                </button>
+                                <button class="slider_control slider_plus" data-action="plus">
+                                    <i class="icon"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="notifications" id="уведомления-новый-кредит"></div>
             </div>
-        </div>
+        </aside>
         <div class="main-content">
-            <div class="offers" id="offers-container"></div>
+            <div class="sk-chase" id="offers-spinner">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+            <div class="offers" id="actual-offers-container"></div>
+            <div class="offers" id="another-offers-container">
+                <div class="offers-container-title unavailable">Результаты, не соответствующие условиям первого кредита</div>
+            </div>
         </div>
     </div>
-
+</main>
+<footer>
     <div class="g-section-middle" id="about-service">
         <div class="g-content">
             <div class="conditions">
@@ -305,9 +316,10 @@
                 принадлежит финансовой организации и на нем не оказываются финансовые услуги.</p>
         </div>
     </div>
-</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js" integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous"></script>
 <script src="../js/offers.js"></script>
 <script src="../js/notification.js"></script>
-
+<script src="../js/calculator.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-console.log("notification load");
-
 (function notification() {
     'use strict';
     var template = '<div class="notify_cards"></div>' +
@@ -41,11 +39,11 @@ console.log("notification load");
             setTimeout(function () {
                 container.removeChild(newNotification);
                 setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3000);
-            }, 2000);
-        }, 3 * 1000);
+            }, 5000);
+        }, 5000);
     };
     window.addEventListener("load", function() {
-        setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3);
+        setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3000);
     });
 })();
 

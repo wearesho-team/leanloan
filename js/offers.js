@@ -955,36 +955,165 @@
             "tags": ['джигурда']
         }
     ];
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         var offerTemplate = document.getElementById('offer-template');
-        var offerContainer = document.getElementById('offers-container');
+        var actualOfferContainer = document.getElementById('actual-offers-container');
+        var anotherOfferContainer = document.getElementById('another-offers-container');
         var offerParams = (new URL(window.location.href)).searchParams.toString();
-        if (!offerTemplate || !offerContainer) {
+        var offersSpinner = document.getElementById('offers-spinner');
+        if (!offerTemplate || !actualOfferContainer || !anotherOfferContainer) {
             return;
         }
 
-        for (var offer of window.__ll_offers) {
-            var offerElement = offerTemplate.cloneNode(true);
+        function splitOffers() {
+            var anotherOffers = [];
+            var actualOffers = window.__ll_offers
+                .filter(function (offer) {
+                    var offerConditions = {
+                        amount: offer.credit_first.split('-', 2),
+                        term: offer.credit_time.split('-', 2)
+                    };
+                    if ((offerConditions.amount[0] > window.__ll_calculator.amount)
+                        || (offerConditions.amount[1] < window.__ll_calculator.amount)
+                        || (offerConditions.term[0] > window.__ll_calculator.term)
+                        || (offerConditions.term[1] < window.__ll_calculator.term)) {
+                        anotherOffers.push(offer);
+                        return false;
+                    }
+                    return true;
+                });
+            return [actualOffers, anotherOffers];
+        }
 
-            offerElement.removeAttribute('style');
-            offerElement.removeAttribute('id');
-            offerElement.innerHTML = offerTemplate.innerHTML
-                .replace(':logo', offer.logo)
-                .replace(':rating', offer.rating)
-                .replace(':credit_time', offer.credit_time)
-                .replace(':rate_from', offer.rate_from)
-                .replace(':link', offer.link + offerParams);
-            offerElement
-                .querySelector('.offer_rating_stars_icons')
-                .setAttribute('style', "width: " + (offer.rating / 5 * 100) + "%");
-            var offerLogo = document.createElement('img');
-            offerLogo.setAttribute('src', offer.logo);
-            offerLogo.setAttribute('alt', offer.title);
-            offerElement
-                .querySelector('.logo-container')
-                .appendChild(offerLogo);
-            offerContainer.appendChild(offerElement);
+        function renderOffers(parent, offers) {
+            offers.forEach(function (offer) {
+                var offerElement = offerTemplate.cloneNode(true);
 
+                offerElement.removeAttribute('style');
+                offerElement.setAttribute('id', 'offer-' + offer.title);
+                offerElement.setAttribute('data-title', offer.title);
+                offerElement.innerHTML = offerTemplate.innerHTML
+                    .replace(':logo', offer.logo)
+                    .replace(':rating', offer.rating)
+                    .replace(':credit_time', offer.credit_time)
+                    .replace(':rate_from', offer.rate_from)
+                    .replace(':link', offer.link + offerParams);
+                offerElement
+                    .querySelector('.offer_rating_stars_icons')
+                    .setAttribute('style', "width: " + (offer.rating / 5 * 100) + "%");
+                var offerLogo = document.createElement('img');
+                offerLogo.setAttribute('src', offer.logo);
+                offerLogo.setAttribute('alt', offer.title);
+                offerElement
+                    .querySelector('.logo-container')
+                    .appendChild(offerLogo);
+
+                var offerElementAmount = offerElement.querySelector('[data-field=calculator-amount]');
+                if (offerElementAmount) {
+                    offerElementAmount.innerText = window.__ll_calculator.amount;
+
+                    window.addEventListener(
+                        "__ll_calculator_amount",
+                        function () {
+                            offerElementAmount.innerText = window.__ll_calculator.amount;
+                        }
+                    );
+                }
+
+
+                var offerElementTerm = offerElement.querySelector('[data-field=calculator-term]');
+                if (offerElementTerm) {
+                    offerElementTerm.innerText = window.__ll_calculator.term;
+
+                    window.addEventListener(
+                        "__ll_calculator_term",
+                        function () {
+                            offerElementTerm.innerText = window.__ll_calculator.term;
+                        }
+                    );
+                }
+
+                function getInterest() {
+                    return Math.floor(window.__ll_calculator.amount
+                        * window.__ll_calculator.term
+                        * offer.rate_from
+                        / 100);
+                }
+
+                var offerElementInterest = offerElement.querySelector('[data-field=calculator-interest]');
+                if (offerElementInterest) {
+                    function setInterest() {
+                        offerElementInterest.innerText = getInterest();
+                    }
+
+                    setInterest();
+
+                    window.addEventListener("__ll_calculator_term", setInterest);
+                    window.addEventListener("__ll_calculator_amount", setInterest);
+                }
+
+                var offerElementReturnAmount = offerElement.querySelector('[data-field=calculator-return-amount]');
+                if (offerElementReturnAmount) {
+                    function setReturnAmount() {
+                        offerElementReturnAmount.innerText = Math.round(
+                            (getInterest() + parseInt(window.__ll_calculator.amount, 10)) * 100
+                        ) / 100;
+                    }
+
+                    setReturnAmount();
+
+                    window.addEventListener("__ll_calculator_term", setReturnAmount);
+                    window.addEventListener("__ll_calculator_amount", setReturnAmount);
+                }
+
+                parent.appendChild(offerElement);
+            });
+        }
+
+        actualOfferContainer.setAttribute("style", "display: none");
+        anotherOfferContainer.setAttribute("style", "display: none");
+
+        var offers = splitOffers();
+        renderOffers(actualOfferContainer, offers[0]);
+        renderOffers(anotherOfferContainer, offers[1]);
+
+        offersSpinner.parentNode.removeChild(offersSpinner);
+        actualOfferContainer.removeAttribute("style");
+        anotherOfferContainer.removeAttribute("style");
+
+        var filterPromise = Promise.resolve();
+        function filterOffersCalculator() {
+            filterPromise = filterPromise
+                .then(function () {
+                    var actualOffersTitles = splitOffers()[0]
+                        .map(function (offer) {
+                            return offer.title;
+                        });
+
+                    var offersElements = Array.from(actualOfferContainer.getElementsByTagName('article'))
+                        .concat(Array.from(anotherOfferContainer.getElementsByTagName('article')))
+                        .forEach(function (offerElement) {
+                            var offerElementTitle = offerElement.getAttribute('id').split('-', 2)[1];
+                            if (offerElement.parentNode === actualOfferContainer) {
+                                if (!actualOffersTitles.includes(offerElementTitle)) {
+                                    actualOfferContainer.removeChild(offerElement);
+                                    anotherOfferContainer.appendChild(offerElement);
+                                }
+                            }
+                        });
+                });
+        }
+
+        window.addEventListener("__ll_calculator_amount", filterOffersCalculator);
+        window.addEventListener("__ll_calculator_term", filterOffersCalculator);
+
+        if (document.querySelector('aside.sticky')) {
+            var sidebar = new StickySidebar('aside.sticky', {
+                containerSelector: 'main',
+                innerWrapperSelector: 'aside.sticky > div',
+                topSpacing: 30,
+                bottomSpacing: 160
+            });
         }
     });
 })();
