@@ -44,6 +44,8 @@ console.log("notification load");
             }, 2000);
         }, 3 * 1000);
     };
-    setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3);
+    window.addEventListener("load", function() {
+        setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3);
+    });
 })();
 
