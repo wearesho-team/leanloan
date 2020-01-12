@@ -1,0 +1,42 @@
+<template>
+    <div class="sidebar__inner">
+        <div class="credit_calc" id="credit-calculator">
+            <div class="credit_calc_row" data-field="amount">
+                <div class="calc_sum">
+                    <div class="calc_sum_value">
+                        <div class="calc_sum_value_suffix">грн</div>
+                        <input type="text" class="calc_sum_value_input" id="calcSumInput">
+                    </div>
+                    <label for="calcSumInput" class="calc_sum_label">Сумма займа</label>
+                </div>
+                <div class="slider_line_cont">
+                    <input type="range">
+                    <button class="slider_control slider_minus" data-action="minus">
+                        <i class="icon"></i>
+                    </button>
+                    <button class="slider_control slider_plus" data-action="plus">
+                        <i class="icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="credit_calc_row calc_term" data-field="term">
+                <div class="calc_sum">
+                    <div class="calc_sum_value">
+                        <div class="calc_sum_value_suffix">дней</div>
+                        <input type="text" class="calc_sum_value_input" id="calcTermInput">
+                    </div>
+                    <label for="calcTermInput" class="calc_sum_label">Срок займа</label>
+                </div>
+                <div class="slider_line_cont">
+                    <input type="range">
+                    <button class="slider_control slider_minus" data-action="minus">
+                        <i class="icon"></i>
+                    </button>
+                    <button class="slider_control slider_plus" data-action="plus">
+                        <i class="icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
