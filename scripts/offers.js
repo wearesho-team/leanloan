@@ -1059,17 +1059,17 @@
     function createOfferElement(element, offer) {
         var article = element.querySelector('article');
         article.setAttribute('data-title', offer.title);
-        element.querySelectorAll('[data-key]').forEach(function (offerKeyElement) {
+        Array.from(element.querySelectorAll('[data-key]')).forEach(function (offerKeyElement) {
             offerKeyElement.innerText = offer[offerKeyElement.getAttribute('data-key')];
         });
-        element.querySelectorAll('[data-rating-icon]').forEach(function (ratingIconElement) {
+        Array.from(element.querySelectorAll('[data-rating-icon]')).forEach(function (ratingIconElement) {
             ratingIconElement.style.width = (offer.rating / 5 * 100) + "%";
         });
-        element.querySelectorAll('[data-link]').forEach(function (dataLinkElement) {
+        Array.from(element.querySelectorAll('[data-link]')).forEach(function (dataLinkElement) {
             dataLinkElement.href = offer.link;
             dataLinkElement.alt = offer.title;
         });
-        element.querySelectorAll('img[data-logo]').forEach(function (logoElement) {
+        Array.from(element.querySelectorAll('img[data-logo]')).forEach(function (logoElement) {
             console.log(supportWebP);
             logoElement.setAttribute('data-src', supportWebP ? offer.logo.replace('png', 'webp') : offer.logo);
             logoElement.setAttribute('alt', offer.title);
