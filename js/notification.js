@@ -14,7 +14,7 @@
 
     window.__ll_showNotification = function () {
         var newNotification = document.createElement('div');
-        newNotification.setAttribute('class', 'notify');
+        newNotification.setAttribute('class', 'notify animated fadeInUp');
         newNotification.innerHTML = template
                 .replace(
                 ':amount',

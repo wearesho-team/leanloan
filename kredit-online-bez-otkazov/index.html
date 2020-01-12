@@ -8,22 +8,6 @@
     <meta name="description"
           content="Нужен кредит онлайн без отказа? На нашем сайта можно оформить займа онлайн без отказа, выбрав среди множества сервисов.">
 
-    <!-- Google Tag Manager STARTS -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WH359S8');</script>
-    <!-- Google Tag Manager ENDS -->
-
     <link rel="canonical" href="https://leanloan.com.ua/kredit-onlajn-bez-otkaza/ua"/>
     <link rel="alternate" hreflang="ru_UA" href="https://leanloan.com.ua/kredit-onlajn-bez-otkaza"/>
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,800,900&display=swap&subset=cyrillic"
@@ -42,6 +26,7 @@
     <meta property="og:site_name" content="Leanloan"/>
     <meta property="og:image" content="https://leanloan.com.ua/android-chrome-512x512.png"/>
     <!-- OpenGraph ENDS -->
+    <meta property="offer:tags" content=""/>
 </head>
 <body>
 <article class="offer" id="offer-template" style="display: none;">
@@ -159,9 +144,9 @@
                             <div class="calc_sum">
                                 <div class="calc_sum_value">
                                     <div class="calc_sum_value_suffix">грн</div>
-                                    <input type="text" class="calc_sum_value_input">
+                                    <input type="text" class="calc_sum_value_input" id="calcSumInput">
                                 </div>
-                                <div class="calc_sum_label">Сумма займа</div>
+                                <label for="calcSumInput" class="calc_sum_label">Сумма займа</label>
                             </div>
                             <div class="slider_line_cont">
                                 <input type="range">
@@ -177,9 +162,9 @@
                             <div class="calc_sum">
                                 <div class="calc_sum_value">
                                     <div class="calc_sum_value_suffix">дней</div>
-                                    <input type="text" class="calc_sum_value_input">
+                                    <input type="text" class="calc_sum_value_input" id="calcTermInput">
                                 </div>
-                                <div class="calc_sum_label">Срок займа</div>
+                                <label for="calcTermInput" class="calc_sum_label">Срок займа</label>
                             </div>
                             <div class="slider_line_cont">
                                 <input type="range">
@@ -207,7 +192,9 @@
             </div>
             <div class="offers" id="actual-offers-container"></div>
             <div class="offers" id="another-offers-container">
-                <div class="offers-container-title unavailable">Результаты, не соответствующие условиям первого кредита</div>
+                <div class="offers-container-title unavailable">Результаты, не соответствующие условиям первого
+                    кредита
+                </div>
             </div>
         </div>
     </div>
@@ -317,7 +304,8 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js" integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"
+        integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous"></script>
 <script src="../js/offers.js"></script>
 <script src="../js/notification.js"></script>
 <script src="../js/calculator.js"></script>

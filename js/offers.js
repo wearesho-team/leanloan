@@ -1,5 +1,10 @@
 (function offers() {
     'use strict';
+
+    function mapOfferTag(tag) {
+        return tag.trim().toLowerCase();
+    }
+
     window.__ll_offers = [
         {
             "id": 5,
@@ -16,7 +21,8 @@
             "feature_text": "",
             "pos": 2,
             "day_offer": 0,
-            "st": 1
+            "st": 1,
+            "tags": ['отказу-нет',],
         },
         {
             "id": 6,
@@ -33,7 +39,8 @@
             "feature_text": "",
             "pos": 18,
             "day_offer": 0,
-            "st": 1
+            "st": 1,
+            "tags": ['отказу-нет',],
         },
         {
             "id": 7,
@@ -954,7 +961,13 @@
             "st": 1,
             "tags": ['джигурда']
         }
-    ];
+    ]
+        .map(function (offer) {
+            if (offer.tags) {
+                offer.tags = offer.tags.map(mapOfferTag);
+            }
+            return offer;
+        });
     window.addEventListener("load", function () {
         var offerTemplate = document.getElementById('offer-template');
         var actualOfferContainer = document.getElementById('actual-offers-container');
@@ -964,19 +977,40 @@
         if (!offerTemplate || !actualOfferContainer || !anotherOfferContainer) {
             return;
         }
+        var pageOffers = window.__ll_offers;
+        var pageOfferTagsElement = document.querySelector('meta[property="offer:tags"]');
+        if (pageOfferTagsElement && pageOfferTagsElement.getAttribute("content")) {
+            var pageOfferTags = pageOfferTagsElement
+                .getAttribute('content')
+                .split(',')
+                .map(mapOfferTag);
+
+            pageOffers = pageOffers
+                .filter(function (offer) {
+                    if (!offer.tags) {
+                        return false;
+                    }
+                    for (var pageOfferTag of pageOfferTags) {
+                        for (var offerTag of offer.tags) {
+                            if (offerTag === pageOfferTag) {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                });
+        }
 
         function splitOffers() {
             var anotherOffers = [];
-            var actualOffers = window.__ll_offers
+            var actualOffers = pageOffers
                 .filter(function (offer) {
-                    var offerConditions = {
-                        amount: offer.credit_first.split('-', 2),
-                        term: offer.credit_time.split('-', 2)
-                    };
-                    if ((offerConditions.amount[0] > window.__ll_calculator.amount)
-                        || (offerConditions.amount[1] < window.__ll_calculator.amount)
-                        || (offerConditions.term[0] > window.__ll_calculator.term)
-                        || (offerConditions.term[1] < window.__ll_calculator.term)) {
+                    var amount = offer.credit_first.split('-', 2);
+                    var term = offer.credit_time.split('-', 2);
+                    if ((amount[0] > window.__ll_calculator.amount)
+                        || (amount[1] < window.__ll_calculator.amount)
+                        || (term[0] > window.__ll_calculator.term)
+                        || (term[1] < window.__ll_calculator.term)) {
                         anotherOffers.push(offer);
                         return false;
                     }
@@ -1082,6 +1116,7 @@
         anotherOfferContainer.removeAttribute("style");
 
         var filterPromise = Promise.resolve();
+
         function filterOffersCalculator() {
             filterPromise = filterPromise
                 .then(function () {
@@ -1090,15 +1125,23 @@
                             return offer.title;
                         });
 
-                    var offersElements = Array.from(actualOfferContainer.getElementsByTagName('article'))
+                    Array.from(actualOfferContainer.getElementsByTagName('article'))
                         .concat(Array.from(anotherOfferContainer.getElementsByTagName('article')))
                         .forEach(function (offerElement) {
                             var offerElementTitle = offerElement.getAttribute('id').split('-', 2)[1];
-                            if (offerElement.parentNode === actualOfferContainer) {
-                                if (!actualOffersTitles.includes(offerElementTitle)) {
-                                    actualOfferContainer.removeChild(offerElement);
-                                    anotherOfferContainer.appendChild(offerElement);
-                                }
+                            var isOfferElementActual = actualOffersTitles.includes(offerElementTitle);
+                            switch(offerElement.parentNode) {
+                                case actualOfferContainer:
+                                    if (!isOfferElementActual) {
+                                        actualOfferContainer.removeChild(offerElement);
+                                        anotherOfferContainer.appendChild(offerElement);
+                                    }
+                                    return;
+                                case anotherOfferContainer:
+                                    if (isOfferElementActual) {
+                                        anotherOfferContainer.removeChild(offerElement);
+                                        actualOfferContainer.appendChild(offerElement);
+                                    }
                             }
                         });
                 });
@@ -1108,7 +1151,7 @@
         window.addEventListener("__ll_calculator_term", filterOffersCalculator);
 
         if (document.querySelector('aside.sticky')) {
-            var sidebar = new StickySidebar('aside.sticky', {
+            new StickySidebar('aside.sticky', {
                 containerSelector: 'main',
                 innerWrapperSelector: 'aside.sticky > div',
                 topSpacing: 30,
