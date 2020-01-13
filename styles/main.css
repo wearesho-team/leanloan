@@ -179,11 +179,11 @@ body {
 
 
 /* Hamberger Menu STARTS */
-#menu__toggle, 
-.menu__btn, 
-.menu__btn, 
-.menu__box,
-.menu__item,
+#menu-toggle, 
+.menu-btn, 
+.menu-btn, 
+.menu-box,
+.menu-item,
 .hamburger-logo,
 .hamburger-menu
  {
@@ -203,31 +203,31 @@ body {
     display: inline-block;
   }
 
-  #menu__toggle {
+  #menu-toggle {
     opacity: 0;
     visibility: visible;
   }
 
-  #menu__toggle:checked ~ .menu__btn > span {
+  #menu-toggle:checked ~ .menu-btn > span {
     transform: rotate(45deg);
     visibility: visible;
   }
-  #menu__toggle:checked ~ .menu__btn > span::before {
+  #menu-toggle:checked ~ .menu-btn > span::before {
     top: 0;
     transform: rotate(0);
     visibility: visible;
   }
-  #menu__toggle:checked ~ .menu__btn > span::after {
+  #menu-toggle:checked ~ .menu-btn > span::after {
     top: 0;
     transform: rotate(90deg);
     visibility: visible;
   }
-  #menu__toggle:checked ~ .menu__box {
+  #menu-toggle:checked ~ .menu-box {
     visibility: visible;
     left: 0;
   }
 
-  .menu__btn {
+  .menu-btn {
     display: flex;
     align-items: center;
     position: absolute;
@@ -242,9 +242,9 @@ body {
     visibility: visible;
   }
 
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
     display: block;
     position: absolute;
 
@@ -256,18 +256,18 @@ body {
     transition-duration: .25s;
     visibility: visible;
   }
-  .menu__btn > span::before {
+  .menu-btn > span::before {
     content: '';
     top: -8px;
     visibility: visible;
   }
-  .menu__btn > span::after {
+  .menu-btn > span::after {
     content: '';
     top: 8px;
     visibility: visible;
   }
 
-  .menu__box {
+  .menu-box {
     display: block;
     position: absolute;
     visibility: hidden;
@@ -289,7 +289,7 @@ body {
     transition-duration: .25s;
   }
 
-  .menu__item {
+  .menu-item {
     display: block;
     padding: 7px 22px;
 
@@ -304,7 +304,7 @@ body {
     transition-duration: .25s;
     visibility: visible;
   }
-  .menu__item:hover {
+  .menu-item:hover {
     font-weight: 600;
     color: black;
     background-color: #edb641;
@@ -803,37 +803,37 @@ body {
   transform: scale(1.03);
 }
 
-.offer:hover .offer--button {
+.offer:hover .offer-button {
   background-color: #1b90e9;
   color: #fff;
 }
 
-.offer--logo {
+.offer-logo {
   padding: 15px;
   height: 90px;
   background-color: white;
 }
 
-.offer--logo img {
+.offer-logo img {
   display: block;
   margin: 0 auto;
   max-width: 60%;
 }
 
 @media(max-width:768px) {
-  .offer--logo {
+  .offer-logo {
     padding: 10px;
     height: 70px;
     background-color: white;
   }
-  .offer--logo img {
+  .offer-logo img {
     display: block;
     margin: 0 auto;
     max-width: 60%;
   }
 }
 
-.offer--title-company {
+.offer-title-company {
   background-color: #ffe69b;
   padding: 15px;
   font-size: 14px;
@@ -845,7 +845,7 @@ body {
   /* border-bottom: 1px solid #cfcece; */
 }
 
-.offer--title {
+.offer-title {
   background-color: #fffad0;
   padding: 11px;
   font-size: 16px;
@@ -858,7 +858,7 @@ body {
 }
 
 @media(max-width:768px) {
-  .offer--title {
+  .offer-title {
     background-color: #fffad0;
     padding: 8px;
     font-size: 14px;
@@ -869,11 +869,11 @@ body {
   }
 }
 
-.offer--list {
+.offer-list {
   list-style-type: none;
 }
 
-.offer--list li {
+.offer-list li {
   background-color: white;
   display: block;
   padding: 6px 0;
@@ -882,12 +882,12 @@ body {
   border-bottom: 1px solid #cfcece;
 }
 
-.offer--list li span {
+.offer-list li span {
   font-weight: 500;
 }
 
 @media(max-width:768px) {
-  .offer--list li {
+  .offer-list li {
     padding: 4px 0;
     font-size: 13px;
   }
@@ -950,7 +950,7 @@ li.seccol {
   background-color: #fffad0;
 }
 
-.offer--button {
+.offer-button {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   background-color: #41a0e9;
   color: #fff;
@@ -970,14 +970,14 @@ li.seccol {
 }
 
 @media(max-width:768px) {
-  .offer--button {
+  .offer-button {
     margin: 5px auto;
     font-size: 15px;
     height: 45px;
   }
 }
 
-.offer_wrap {
+.offer-wrap {
   text-decoration: none;
   background-color: transparent;
   color: #525453;
