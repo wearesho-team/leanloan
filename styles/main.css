@@ -20,7 +20,7 @@ html {
 body {
     font-family: 'Rubik', sans-serif !important;
     font-size: 16px;
-    background-color: transparent;.all-button
+    background-color: transparent;
 }
 
 /* Top section markup STARTS */
@@ -101,7 +101,7 @@ body {
     /* box-shadow: 3px 0 7px rgba(0,0,0,.3); */
     max-width: 1260px;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 0px;
     padding-left: 30px;
     padding-right: 30px;
@@ -148,6 +148,31 @@ body {
     opacity: 1;
 }
 
+a.shine-link {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #34D1BF;
+    background: rgba(52, 209, 191, 0.2);
+    border-color: transparent;
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a.shine-link:hover {
+    color: #ffffff;
+    -webkit-box-shadow: 0px 16px 31px -16px #34D1BF;
+    box-shadow: 0px 16px 31px -16px #34D1BF;
+    background: #2cc4b3;
+    border-color: #2cc4b3;
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+    outline: none;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .menu-main {
         float: none;
@@ -173,6 +198,7 @@ body {
 .active-link a {
     padding: 5px 15px;
     color: white;
+    font-size: 16px;
 }
 
 .menu-link:hover {
@@ -609,7 +635,7 @@ body {
 .servicestext-over {
     text-align: center;
     font-family: 'Rubik', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #2f55d4;
     padding-top: 60px;
@@ -628,15 +654,15 @@ body {
 }
 
 .filtertext-over {
-     text-align: center;
-     font-family: 'Rubik', sans-serif;
-     font-size: 15px;
-     font-weight: 500;
-     color: #2f55d4;
-     padding-top: 85px;
-     padding-bottom: 4px;
-     text-transform: uppercase;
- }
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2f55d4;
+    padding-top: 85px;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+}
 
 .filtertext-top {
     display: block;
@@ -764,7 +790,7 @@ body {
     color: #343a40;
     display: block;
     padding: 5px 0;
-    font-size: 16px;
+    font-size: 15px;
     text-align: left;
     margin-left: 15px;
     /* border-bottom: 1px solid #cfcece; */
