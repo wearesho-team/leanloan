@@ -649,6 +649,7 @@ a.shine-link:hover {
 @media (max-width: 768px) {
     .offer-list {
         padding-top: 18px;
+        padding-left: 0;
     }
 }
 
