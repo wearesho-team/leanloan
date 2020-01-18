@@ -48,13 +48,13 @@ body {
     .g-container {
         padding: 0 5px;
     }
+}
 
-    .g-section-top {
-        width: 100%;
-        margin: 0 auto;
-        background-color: #f8fafe;
-        padding-bottom: 90px;
-    }
+.g-section-top {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f8fafe;
+    padding-bottom: 90px;
 }
 
 @media (max-width: 768px) {
@@ -1176,7 +1176,7 @@ li.seccol {
     font-size: 14px;
     font-weight: 500;
     color: #2f55d4;
-    padding-top: 85px;
+    padding-top: 60px;
     padding-bottom: 4px;
     text-transform: uppercase;
 }
