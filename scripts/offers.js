@@ -1025,10 +1025,10 @@
     function connectOfferConditions(fragment, offer) {
         getOfferConditions(offer).forEach(function (condition) {
             function updateElements() {
-                var value = condition.valueOf();
                 Array.from(fragment.querySelectorAll('[data-condition="' + condition.name + '"]'))
                     .forEach(function (conditionElement) {
-                        conditionElement.innerText = value;
+                        console.log(conditionElement, condition.valueOf());
+                        conditionElement.innerText = condition.valueOf();;
                     })
             }
 

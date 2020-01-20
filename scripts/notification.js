@@ -35,7 +35,7 @@
 
         container.appendChild(newNotification);
         setTimeout(function () {
-            newNotification.setAttribute('class', 'notify fadeOutUp animated');
+            newNotification.setAttribute('class', 'notify fadeOut animated');
             setTimeout(function () {
                 container.removeChild(newNotification);
                 setTimeout(window.__ll_showNotification, Math.random() * 2000 + 3000);

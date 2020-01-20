@@ -133,7 +133,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #41a0e9;
+    background: #d4d4d4;
 }
 
 input[type=range]::-moz-range-track {
@@ -141,7 +141,7 @@ input[type=range]::-moz-range-track {
     height: 6px;
     cursor: pointer;
     /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
-    background: #41a0e9;
+    background: #d4d4d4;
     border-radius: 1.3px;
     /*border: 0.2px solid #010101;*/
 }
@@ -156,22 +156,22 @@ input[type=range]::-ms-track {
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
-    background: #41a0e9;
+    background: #d4d4d4;
     border: 0.2px solid #010101;
     border-radius: 2.6px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type=range]:focus::-ms-fill-lower {
-    background: #41a0e9;
+    background: #d4d4d4;
 }
 input[type=range]::-ms-fill-upper {
-    background: #41a0e9;
+    background: #d4d4d4;
     border: 0.2px solid #010101;
     border-radius: 2.6px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type=range]:focus::-ms-fill-upper {
-    background: #41a0e9;
+    background: #d4d4d4;
 }
 
 button, input, optgroup, select, textarea {
@@ -1566,12 +1566,13 @@ body {
 .head-section {
     background-color: #2f55d4;
     border-radius: 0 0 30px 30px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 
 @media (max-width: 768px) {
     .head-section {
         border-radius: 0 0 15px 15px;
+        padding-bottom: 25px;
     }
 }
 
@@ -1585,7 +1586,7 @@ body {
     font-weight: 500;
     width: 700px;
     color: #ffffff;
-    padding-top: 70px;
+    padding-top: 50px;
     line-height: 1.3;
     text-align: center;
     margin: 0 auto;
@@ -1596,7 +1597,7 @@ body {
     .headtext-top {
         display: block;
         font-family: 'Rubik', sans-serif;
-        font-size: 20px;
+        font-size: 23px;
         color: #ffffff;
         padding-top: 40px;
         padding-left: 10px;
@@ -1623,7 +1624,7 @@ body {
     .headtext-under {
         text-align: center;
         font-size: 15px;
-        padding-top: 10px;
+        /*padding-top: 10px;*/
         padding-bottom: 30px;
         margin-left: 5px;
         margin-right: 5px;
@@ -1767,6 +1768,7 @@ a.shine-link:hover {
         padding-top: 13px;
         padding-right: 11px;
         display: inline-block;
+        margin-top: 9px;
     }
 
     #menu-toggle {
@@ -3018,10 +3020,11 @@ MEDIA
     }
 
     .sidebar-inner {
-        top: 30px;
+        /*top: 30px;*/
         position: static;
-        margin-top: 10px;
+        /*margin-top: 10px;*/
         /*margin-bottom: 20px;*/
+        height: 250px;
     }
 
     .recommend_text {
@@ -3065,6 +3068,12 @@ MEDIA
     position: relative;
     padding: 0 46px 0;
     padding-top: 18px;
+}
+
+@media (max-width: 768px) {
+    .slider_line_cont {
+        padding-bottom: 10px;
+    }
 }
 
 .slider_line_cont .slider_control {
