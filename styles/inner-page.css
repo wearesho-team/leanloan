@@ -2143,6 +2143,13 @@ a.shine-link:hover {
     transition: .5s;
 }
 
+@media (max-width: 768px) {
+    .primary_btn {
+        border-radius: 7px;
+        padding: 8px 0 8px 0;
+    }
+}
+
 .primary_btn:hover {
     -webkit-box-shadow: 0 16px 31px -16px #2f55d4;
     box-shadow: 0 16px 31px -16px #2f55d4;
