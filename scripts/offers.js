@@ -1032,7 +1032,13 @@
                     })
             }
 
-            condition.events.forEach((event) => window.addEventListener(event, updateElements));
+            condition.events.forEach((event) => window.addEventListener(event, function () {
+                Array.from(document.querySelectorAll('[data-title="' + offer.title + '"] [data-condition="' + condition.name + '"]'))
+                    .forEach(function (conditionElement) {
+                        console.log(conditionElement, condition.valueOf());
+                        conditionElement.innerText = condition.valueOf();;
+                    })
+            }));
             if (window.__ll_calculator) {
                 updateElements();
             }

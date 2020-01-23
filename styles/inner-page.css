@@ -94,7 +94,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 40px;
     width: 40px;
     border-radius: 7px;
-    background: #41a0e9;
+    background: #2f55d4;
     cursor: pointer;
     margin-top: -17px; /* Вам нужно указать значение для поля в Chrome, но в Firefox и IE это происходит автоматически */
     /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; !* Добавляем классные эффекты для слайдера! *!*/
@@ -107,7 +107,7 @@ input[type=range]::-moz-range-thumb {
     height: 40px;
     width: 40px;
     border-radius: 7px;
-    background: #41a0e9;
+    background: #2f55d4;
     cursor: pointer;
 }
 
@@ -118,7 +118,7 @@ input[type=range]::-ms-thumb {
     height: 40px;
     width: 40px;
     border-radius: 7px;
-    background: #41a0e9;
+    background: #2f55d4;
     cursor: pointer;
 }
 
@@ -2230,7 +2230,7 @@ a.shine-link:hover {
     font-size: 19px;
     line-height: 2;
     /* margin-left: 15px; */
-    background: #41a0e9;
+    background: #2f55d4;
     padding: 3px 6px;
     color: white;
     font-weight: 400;
@@ -2651,7 +2651,7 @@ OFFER
 
 .offer_info_con {
     display: inline-block;
-    width: calc(100% - 240px);
+    width: calc(100% - 235px);
     padding-left: 20px;
     vertical-align: middle;
 }
@@ -2693,7 +2693,7 @@ OFFER
     font-weight: 400;
     position: absolute;
     right: 20px;
-    top: 1px;
+    top: -1px;
 }
 
 .offer_money > div:nth-child(2),
@@ -2707,13 +2707,13 @@ OFFER
     font-size: 20px;
     font-weight: 400;
     position: absolute;
-    right: 15px;
-    top: 1px;
+    right: 12px;
+    top: -1px;
 }
 
 .offer_money > div:nth-child(3),
 .offer_conditions > div:nth-child(3) {
-    width: 132px;
+    width: 135px;
 }
 
 .offer_money .label,
@@ -2721,7 +2721,7 @@ OFFER
     display: block;
     margin-bottom: 5px;
     line-height: 1;
-    font-size: 14px;
+    font-size: 13.5px;
     color: #5e5d5f;
     font-weight: 400;
 }
@@ -2729,7 +2729,7 @@ OFFER
 .offer_money .value,
 .offer_conditions .value {
     color: #343a40;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     position: relative;
 }
@@ -3104,7 +3104,7 @@ MEDIA
     height: 28px;
     border-radius: 7px;
     -webkit-border-radius: 7px;
-    background-color: #41a0e9;
+    background-color: #294dc6;
     border: 0;
 }
 
