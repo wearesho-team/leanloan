@@ -758,7 +758,7 @@ li.seccol {
 
 @media (max-width: 768px) {
     .offer-button {
-        margin: 0px 30px 0 30px;
+        margin: 0 30px 0 30px;
         font-size: 14px;
         height: 35px;
     }
