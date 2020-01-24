@@ -1027,7 +1027,6 @@
             function updateElements() {
                 Array.from(fragment.querySelectorAll('[data-condition="' + condition.name + '"]'))
                     .forEach(function (conditionElement) {
-                        console.log(conditionElement, condition.valueOf());
                         conditionElement.innerText = condition.valueOf();;
                     })
             }
@@ -1035,7 +1034,6 @@
             condition.events.forEach((event) => window.addEventListener(event, function () {
                 Array.from(document.querySelectorAll('[data-title="' + offer.title + '"] [data-condition="' + condition.name + '"]'))
                     .forEach(function (conditionElement) {
-                        console.log(conditionElement, condition.valueOf());
                         conditionElement.innerText = condition.valueOf();;
                     })
             }));
@@ -1076,7 +1074,6 @@
             dataLinkElement.alt = offer.title;
         });
         Array.from(element.querySelectorAll('img[data-logo]')).forEach(function (logoElement) {
-            console.log(supportWebP);
             logoElement.setAttribute('data-src', supportWebP ? offer.logo.replace('png', 'webp') : offer.logo);
             logoElement.setAttribute('alt', offer.title);
         });
