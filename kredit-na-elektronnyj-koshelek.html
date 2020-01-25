@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Кредит на электронный кошелек
+    </title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description"
+          content="Нужен кредит на электронный кошелек? На нашем сайте можно оформить займ на эл. кошелек, выбрав среди множества сервисов.">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" as="style" href="./styles/inner-page.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous">
+    <!--    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"-->
+    <!--          integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous">-->
+
+    <link rel="preload" href="./scripts/vendor.js" as="script">
+    <link rel="preload" href="./scripts/calculator.js" as="script">
+    <link rel="preload" href="./scripts/notification.js" as="script">
+    <link rel="preload" href="./scripts/offers.js" as="script">
+
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Кредит на электронный кошелек"/>
+    <meta property="og:description"
+          content="Нужен кредит на электронный кошелек? На нашем сайте можно оформить займ на эл. кошелек, выбрав среди множества сервисов."/>
+    <meta property="og:url" content="https://leanloan.com.ua/kredit-na-elektronnyj-koshelek.html"/>
+    <meta property="og:site_name" content="Leanloan"/>
+    <meta property="og:image" content="https://leanloan.com.ua/images/android-chrome-192x192.png"/>
+
+    <link rel="stylesheet" href="./styles/inner-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous"
+    />
+</head>
+
+<body>
+<!--NAVIGATION STARTS-->
+<div class="head-section">
+    <nav class="top-menu">
+        <a class="navbar-logo" href="./index.html">
+            <img data-logo src="./images/logo.png" height="23px" alt="Leanloan">
+        </a>
+        <ul class="menu-main">
+            <li><a class="menu-link" href="./index.html">Главная</a></li>
+            <li><a class="menu-link" href="./index.html#about-service">О нас</a></li>
+            <li><a class="shine-link" href="./all-services.html">Все сервисы</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburger-menu">
+        <input id="menu-toggle" type="checkbox"/>
+        <label class="menu-btn" for="menu-toggle"><span></span></label>
+        <ul class="menu-box">
+            <li><a class="menu-item" href="./index.html">Главная</a></li>
+            <li><a class="menu-item" href="./index.html#about-service">О сервисе</a></li>
+        </ul>
+        <img src="./images/logo.png" height="16px" class="hamburger-logo" alt="Leanloan">
+    </div>
+
+    <h1 class="headtext-top">Кредит на электронный кошелек</h1>
+    <p class="headtext-under">
+        Выбирайте сервисы с кредитами на электронный кошелек
+    </p>
+</div>
+<!--NAVIGATION ENDS-->
+<div class="main">
+    <div class="container">
+        <aside class="sticky">
+            <iframe src="./templates/calculator.html" data-template="" height="0" width="0"></iframe>
+            <div class="notifications" id="notifications-new-credit"></div>
+        </aside>
+        <main data-role="offers" data-tags>
+            <template data-part="article">
+                <article class="offer">
+                    <div class="offer_logo">
+                        <div class="offer_logo_con logo-container">
+                            <img alt="Offer Logo" data-logo/>
+                        </div>
+                        <figure class="offer_rating">
+                            <div class="offer_rating_stars">
+                                <div class="offer_rating_stars_icons" data-rating-icon>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <div class="offer_rating_stars_icons_outline">
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                </div>
+                            </div>
+                            <figcaption class="offer_rating_text" data-key="rating"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="offer_info">
+                        <div class="offer_info_con">
+                            <div class="offer_money">
+                                <div>
+                                    <div class="label">Возвращаете</div>
+                                    <div class="value">
+                                        <span data-condition="returnAmount"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Берете</div>
+                                    <div class="value">
+                                        <span data-condition="amount"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">
+                                        Переплата за <span class="fee_days" data-condition="term"></span> &nbsp;дн.
+                                    </div>
+                                    <div class="value">
+                                        <span data-condition="interest"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer_conditions">
+                                <div>
+                                    <div class="label">1й кредит</div>
+                                    <div class="value">
+                                        <span data-key="credit_first"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Ставка</div>
+                                    <div class="value">
+                                        <span data-key="rate_from"></span>
+                                        <small>%</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Срок</div>
+                                    <div class="value">
+                                        <span data-key="credit_time"></span>
+                                        <small>дней</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer_open">
+                            <a data-link rel="noopener nofollow noindex" target="_blank" class="btn primary_btn">
+                                Оформить заявку
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </template>
+            <template data-part="preloader">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </template>
+            <template data-part="actual-list">
+                <section></section>
+            </template>
+            <template data-part="other-list">
+                <h4 class="offers-container-title unavailable">
+                    Результаты, не соответствующие условиям первого кредита
+                </h4>
+                <section></section>
+            </template>
+        </main>
+    </div>
+</div>
+<div class="g-section-middle" id="about-service">
+    <div class="g-content">
+        <div class="conditions">
+            <h2 class="cond-head-main">Кредит на электронный кошелек</h2>
+            <p class="cond-text">На текущий момент наличие электронного кошелька не является редкостью. У многих
+                работников IT-сферы и продвинутых компьютерных пользователей он имеется. Это удобное средство для оплаты
+                услуг в интернете. Многие МФО уже сориентировались на таких клиентов и разработали возможность получение
+                такого микрозайма. Пользователи со своей стороны также стали чаще брать микрокредиты таким образом и тем
+                самым добавили в свою копилку еще один удобный финансовый инструмент.
+            </p>
+
+            <h3 class="cond-head">Кто может получить кредит?</h3>
+            <p class="cond-text">Такой вид кредита имеет ряд преимуществ, поскольку доступен для любого
+                совершеннолетнего гражданина Украины.
+            </p>
+            <p class="cond-text">Создание электронного бумажника занимает всего несколько минут, при этом для финансовых
+                компаний не важно, чтобы такой вид счета имел историю операций, оценка пользователя этого не включает.
+                Также, это связано с тем, что э-кошельки проверить не представляется возможным, однако, скоринговые
+                системы МФО смогут составить портрет клиента и без этого параметра.
+            </p>
+            <p class="cond-text">Для регистрации кошелька требуется только номер телефона владельца, некоторые компании
+                не просят указывать даже паспортные данные и ИНН, поэтому такой вид оформления виртуальной карты
+                набирает популярность.
+            </p>
+
+            <h3 class="cond-head">Какова процедура оформления?</h3>
+            <p class="cond-text">Алгоритм получения займа на электронный кошелек ничем не отличается от получения того
+                же кредита на карту или наличными. Единственное отличие — место зачисления средств. После выбора суммы
+                кредита и срока, на который вы хотите получить займ, требуется пройти стандартную процедуру:
+            </p>
+            <ul class="ul-margined">
+                <li class="cond-pts">заполнить кредитную заявку;</li>
+                <li class="cond-pts">получить решение скоринговой системы, иногда для этого потребуется пройти процедуру
+                    верификации менеджером компании по телефону;
+                </li>
+                <li class="cond-pts">дождаться зачисления средств на кошелек;</li>
+            </ul>
+        </div>
+        <div class="conditions-2">
+            <h3 class="cond-head">Какие кошельки доступны для получения займа?</h3>
+            <p class="cond-text">Большое количество видов электронных кошельков сделать доступным для выдачи кредита не
+                представляется возможным. В связи с этим, в сервисах доступны наиболее популярные:
+            </p>
+            <ul class="ul-margined">
+                <li class="cond-pts">QIWI Wallet;</li>
+                <li class="cond-pts">PayPal;</li>
+                <li class="cond-pts">WebMoney;</li>
+                <li class="cond-pts">Payoneer;</li>
+                <li class="cond-pts">Payeer и др.</li>
+            </ul>
+            <p class="cond-text">Отличия в доступных сроках и суммах кредита, между выдачей на электронный кошелек или
+                на карту нет. В противном случае, это создало бы неравные уловия между клиентами.
+            </p>
+
+            <h3 class="cond-head">Как вернуть такой займ?</h3>
+            <p class="cond-text">Процедура возврата аналогична всем, которые входят в технические возможности сервиса,
+                от вида займа это не зависит:
+            </p>
+            <ul class="ul-margined">
+                <li class="cond-pts">возврат через личный кабинет;</li>
+                <li class="cond-pts">путем пополнения терминала самообслуживания;</li>
+                <li class="cond-pts">с карты любого банка Украины;</li>
+                <li class="cond-pts">посредством банковского перевода.</li>
+            </ul>
+            <p class="cond-text">В случае, если вы пропустили крайнюю дату возврата займа, система попытается
+                автоматически списать средства с электронного кошелька, на который был выдан займ.
+            </p>
+            <p class="cond-text">Если резюмировать всю информацию по кредиту на электронный кошелек, то популярность
+                такого займа растет с каждым годом и сервисы адаптируются к этому, повышая как удобство так и
+                доступность такого вида кредитования. Сервис Leanloan собрал для вас все актуальные МФО, позволяющие
+                взять такой займ быстро и комфортно.
+            </p>
+        </div>
+    </div>
+    <iframe src="./templates/footer.html" data-template height="0" width="0"></iframe>
+    <!--    <script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"-->
+    <!--            integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous"></script>-->
+    <script src="./scripts/vendor.js"></script>
+    <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/offers.js"></script>
+    <script src="./scripts/notification.js"></script>
+</body>
+</html>
