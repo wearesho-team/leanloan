@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Кредит наличными онлайн в отделении
+    </title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description"
+          content="Нужен кредит онлайн наличными? На нашем сайте можно оформить займ наличными, выбрав среди множества сервисов.">
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" as="style" href="./styles/inner-page.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous">
+    <!--    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"-->
+    <!--          integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous">-->
+
+    <link rel="preload" href="./scripts/vendor.js" as="script">
+    <link rel="preload" href="./scripts/calculator.js" as="script">
+    <link rel="preload" href="./scripts/notification.js" as="script">
+    <link rel="preload" href="./scripts/offers.js" as="script">
+
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Кредит наличными онлайн в отделении"/>
+    <meta property="og:description"
+          content="Нужен кредит онлайн наличными? На нашем сайте можно оформить займ наличными, выбрав среди множества сервисов."/>
+    <meta property="og:url" content="https://leanloan.com.ua/kredit-nalichnymi.html"/>
+    <meta property="og:site_name" content="Leanloan"/>
+    <meta property="og:image" content="https://leanloan.com.ua/images/android-chrome-192x192.png"/>
+
+    <link rel="stylesheet" href="./styles/inner-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+          integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous"
+    />
+</head>
+
+<body>
+<!--NAVIGATION STARTS-->
+<div class="head-section">
+    <nav class="top-menu">
+        <a class="navbar-logo" href="./index.html">
+            <img data-logo src="./images/logo.png" height="23px" alt="Leanloan">
+        </a>
+        <ul class="menu-main">
+            <li><a class="menu-link" href="./index.html">Главная</a></li>
+            <li><a class="menu-link" href="./index.html#about-service">О нас</a></li>
+            <li><a class="shine-link" href="./all-services.html">Все сервисы</a></li>
+        </ul>
+    </nav>
+
+    <div class="hamburger-menu">
+        <input id="menu-toggle" type="checkbox"/>
+        <label class="menu-btn" for="menu-toggle"><span></span></label>
+        <ul class="menu-box">
+            <li><a class="menu-item" href="./index.html">Главная</a></li>
+            <li><a class="menu-item" href="./index.html#about-service">О сервисе</a></li>
+        </ul>
+        <img src="./images/logo.png" height="16px" class="hamburger-logo" alt="Leanloan">
+    </div>
+
+    <h1 class="headtext-top">Кредит наличными онлайн</h1>
+    <p class="headtext-under">
+        Выбирайте быстрые кредиты наличными в Украине
+    </p>
+</div>
+<!--NAVIGATION ENDS-->
+<div class="main">
+    <div class="container">
+        <aside class="sticky">
+            <iframe src="./templates/calculator.html" data-template="" height="0" width="0"></iframe>
+            <div class="notifications" id="notifications-new-credit"></div>
+        </aside>
+        <main data-role="offers" data-tags>
+            <template data-part="article">
+                <article class="offer">
+                    <div class="offer_logo">
+                        <div class="offer_logo_con logo-container">
+                            <img alt="Offer Logo" data-logo/>
+                        </div>
+                        <figure class="offer_rating">
+                            <div class="offer_rating_stars">
+                                <div class="offer_rating_stars_icons" data-rating-icon>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                </div>
+                                <div class="offer_rating_stars_icons_outline">
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                    <i class="icon_star_outline"></i>
+                                </div>
+                            </div>
+                            <figcaption class="offer_rating_text" data-key="rating"></figcaption>
+                        </figure>
+                    </div>
+                    <div class="offer_info">
+                        <div class="offer_info_con">
+                            <div class="offer_money">
+                                <div>
+                                    <div class="label">Возвращаете</div>
+                                    <div class="value">
+                                        <span data-condition="returnAmount"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Берете</div>
+                                    <div class="value">
+                                        <span data-condition="amount"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">
+                                        Переплата за <span class="fee_days" data-condition="term"></span> &nbsp;дн.
+                                    </div>
+                                    <div class="value">
+                                        <span data-condition="interest"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="offer_conditions">
+                                <div>
+                                    <div class="label">1й кредит</div>
+                                    <div class="value">
+                                        <span data-key="credit_first"></span>
+                                        <small>грн</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Ставка</div>
+                                    <div class="value">
+                                        <span data-key="rate_from"></span>
+                                        <small>%</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="label">Срок</div>
+                                    <div class="value">
+                                        <span data-key="credit_time"></span>
+                                        <small>дней</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offer_open">
+                            <a data-link rel="noopener nofollow noindex" target="_blank" class="btn primary_btn">
+                                Оформить заявку
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </template>
+            <template data-part="preloader">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </template>
+            <template data-part="actual-list">
+                <section></section>
+            </template>
+            <template data-part="other-list">
+                <h4 class="offers-container-title unavailable">
+                    Результаты, не соответствующие условиям первого кредита
+                </h4>
+                <section></section>
+            </template>
+        </main>
+    </div>
+</div>
+<div class="g-section-middle" id="about-service">
+    <div class="g-content">
+        <div class="conditions">
+            <h2 class="cond-head-main">Кредит наличными в Украине</h2>
+            <p class="cond-text">На текущий момент наблюдается значительный рост популярности кредитов наличными. Это
+                обусловлено тем, что растет удобство использования различных финансовых инструментов, которых с каждым
+                днем становится все больше. Не смотря на то, что люди все чаще берут кредит на карту, кредит наличными
+                остается все также популярен. Люди привыкли к наличности, в некотором роде она является наиболее
+                безопасной формой личных финансов. А непосредственно взятие кредита наличными через интернет объединяет
+                в себе и быстрое получение денег и возможность это получения наличными.</p>
+
+            <h3 class="cond-head">Требования к заемщику</h3>
+            <p class="cond-text">Поскольку кредитования является популярной финансовой услугой, учреждения стараются
+                максимально упростить как процедуру продачи заявки, так и количество документов, необходимых для этого.
+                Ранее МФО старались собрать о клиенте максимум информации и тем замым обезопасив себя, имея полное
+                представление о заемщике. Но скоринговые системы становятся все более продвинутыми и теперь для принятия
+                решения, нужны только самые необходимые данные:
+            </p>
+            <ul class="ul-margined">
+                <li class="cond-pts">наличие паспорта гражданина Украины;</li>
+                <li class="cond-pts">налоговый номер (ИНН);</li>
+                <li class="cond-pts">номер мобильного телефона клиента;</li>
+                <li class="cond-pts">номер рабочей банковской карты;</li>
+                <li class="cond-pts">возраст 18-75 лет, иногда сервисы сужают диапазон до 21-65 лет.</li>
+            </ul>
+            <p class="cond-text">Этот перечень является минимальным. Скажем, несколько лет назад, компании требовали
+                набор различных справок, наличие поручителя, а иногда и залог. Все это отталкивало клиентов и усложняло
+                процесс получения кредита наличными. Сегодня даже наличие судимости редко играет роль в принятии решения
+                о выдаче займа, поскольку есть более существенные параметры, позволяющие лучше понять портрет клиента.
+            </p>
+
+            <h3 class="cond-head">Leanloan — надежный помощник в подборе кредита наличными</h3>
+            <p class="cond-text">Список украинских сервисов микрокредитования посоянно растет, это связано с постоянно
+                повышающимся спросом на кредитование со стороны граждан. Не смотря на то, что количество сервисов
+                увеличивается, все они являются уникальными по стратегии работы. Наша задача залючается в том, чтобы
+                собрать о них всю информацию и позволить клиенту самостоятельно выбрать самые подходящие условия.
+                Благодаря нашему функционалу есть возможность выбора по многим параметрам:
+            </p>
+            <ul class="ul-margined">
+                <li class="cond-pts">сумма займа;</li>
+                <li class="cond-pts">срок займа;</li>
+                <li class="cond-pts">минимальная и максимальная суммы к получению;</li>
+                <li class="cond-pts">документы, которые необходимо предоставить;</li>
+                <li class="cond-pts">детали других условий к получению кредита.</li>
+            </ul>
+            <p class="cond-text">Мы постоянно увеличиваем количество информации о сервисах, работаем над удобством
+                использования сайта и стараемся сделать выбор нужного сервиса для клиентов быстрым и удобным.
+            </p>
+        </div>
+        <div class="conditions-2">
+            <h3 class="cond-head">Плюсы займа наличными</h3>
+            <p class="cond-text">Ряд существенных преимуществ для клиента во взятии наличного кредита:</p>
+            <ul class="ul-margined">
+                <li class="cond-pts">Высокая скорость одобрения кредита. Как правило, все происходит в течении
+                    нескольких минут. Пользователю нужно лишь ввести корректные данные о себе и пройти этап верификации
+                    банковской карты. Во многих МФО есть возможность получения средств в кассе банка.
+                </li>
+                <li class="cond-pts">Простота и прозрачность. В сервисах МФО отсутствуют скрытые платежи и комиссии, а
+                    скорость заполнения анкеты для получения микрозайма наличными сокращается, за счет уменьшения полей
+                    заявки.
+                </li>
+                <li class="cond-pts">Кредитный калькурятор, позволяющий выбрать точную сумму и срок, на который берется
+                    кредит. Обычно, сервисы предоставляют максимум информации клиентам, что позволяет принять взвешенной
+                    решение.
+                </li>
+                <li class="cond-pts">Пролонгации, с помощью которых можно продлить срок пользования. Нередко эта функция
+                    предоставляется бесплатно.
+                </li>
+                <li class="cond-pts">Отсутствие небходимости посещения офиса компании, что позволяет получить кредит
+                    наличными не выходя из дома или работы.
+                </li>
+            </ul>
+            <p class="cond-text">Совокупность всех этих факторов делают получение займа простым и понятным каждому
+                клиенту. У каждого сервиса также имеется отдел поддержки, который онлайн поможет решить любые проблемы.
+            </p>
+
+            <h3 class="cond-head">Как получить микрозайм наличными?</h3>
+            <p class="cond-text">Алгоритм взятия наличного кредита очень прост:</p>
+            <ul class="ul-margined">
+                <li class="cond-pts">выбрать сумму и срок кредитного займа;</li>
+                <li class="cond-pts">заполнить короткую кредитную заявку;</li>
+                <li class="cond-pts">ввести данные карты любого украинского банка;</li>
+                <li class="cond-pts">дождаться решения скоринговой системы;</li>
+            </ul>
+            <p class="cond-text">Ознакомившись со всеми преимуществами наличного кредита, вы можете самостоятельно
+                ощутить удобство и простоту его получения. Сервис Leanloan собрал для вас всю необходимую для этого
+                информацию и предлагает сделать выбор, руководствуясь индивидуальными потребностями. Вы всегда можете
+                рассчитывать на то, что мы размещенные у нас сервисы работают честно и прозрачно.
+            </p>
+        </div>
+    </div>
+    <iframe src="./templates/footer.html" data-template height="0" width="0"></iframe>
+    <!--    <script src="https://cdn.jsdelivr.net/npm/sticky-sidebar@3.3.1/dist/sticky-sidebar.min.js"-->
+    <!--            integrity="sha256-TPVKbrlnbvF7OJAgizr4szb4yMK47+DYILK68nT3vWU=" crossorigin="anonymous"></script>-->
+    <script src="./scripts/vendor.js"></script>
+    <script src="./scripts/calculator.js"></script>
+    <script src="./scripts/offers.js"></script>
+    <script src="./scripts/notification.js"></script>
+</body>
+</html>
