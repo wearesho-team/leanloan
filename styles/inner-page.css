@@ -2528,7 +2528,7 @@ FOOTER
  */
 
 footer {
-    padding-top: 7px;
+    padding-top: 23px;
 }
 
 .footer {
@@ -2536,6 +2536,12 @@ footer {
     background-color: #303B2D;
     padding: 25px 0 20px 0;
     color: #cdcdcd;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding-top: 7px;
+    }
 }
 
 .copyrights {
